@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import videos from "../assets/videos/video.mp4";
+import { useNavigate } from "react-router-dom";
 import {
   Search,
   Briefcase,
@@ -30,6 +31,7 @@ import {
 
 export default function LandingPage() {
   // State management
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -314,7 +316,7 @@ export default function LandingPage() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
+          {/* <nav className="hidden md:flex space-x-6">
             <a
               href="#"
               className="font-medium text-blue-600 border-b-2 border-blue-600 pb-1"
@@ -339,10 +341,33 @@ export default function LandingPage() {
             >
               For Employers
             </a>
-          </nav>
+          </nav> */}
+
+
 
           {/* Desktop User Controls */}
           <div className="hidden md:flex items-center gap-4">
+
+             {/* Resume Upload Button */}
+            <button
+              className="bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-purple-700 transition-colors flex items-center gap-2"
+              onClick={() => navigate("/resume")}
+            >
+              <Briefcase size={18} />
+              Upload Resume
+            </button>
+
+            {/* Chat Button */}
+            <button
+              className="bg-green-600 text-white px-4 py-2 rounded font-medium hover:bg-green-700 transition-colors flex items-center gap-2"
+              onClick={() => {/* TODO: handle chat navigation */}}
+            >
+              <Users size={18} />
+              Chat
+            </button>
+
+
+
             {/* Notifications dropdown */}
             <div className="relative text-gray-600">
               <button
@@ -424,7 +449,9 @@ export default function LandingPage() {
                     href="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <div className="flex items-center">
+                    <div className="flex items-center"
+                      onClick={() => navigate('/home')}
+                    >
                       <LogOut size={16} className="mr-2" />
                       Sign Out
                     </div>
@@ -436,6 +463,7 @@ export default function LandingPage() {
             <button className="bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition-colors">
               Post a Job
             </button>
+          
           </div>
 
           {/* Mobile menu button */}
@@ -540,7 +568,7 @@ export default function LandingPage() {
             <div className="mt-3 ">
               <button
                 onClick={() => setFiltersOpen(!filtersOpen)}
-                className="text-blue-600 text-sm flex items-center gap-1 hover:underline "
+                className="text-white-600 text-sm flex items-center gap-1 hover:underline "
               >
                 <Sliders size={16} />
                 Advanced Filters
@@ -556,11 +584,11 @@ export default function LandingPage() {
                 <div className="grid md:grid-cols-4 gap-4 mt-3 pt-3 border-t border-gray-200">
                   {/* Job Type Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-blue-500 mb-1 ">
+                    <label className="block text-sm font-medium text-blue-200 mb-1 ">
                       Job Type
                     </label>
                     <select
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 text-sm"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white-800 bg-gray-600 text-sm "
                       value={jobType}
                       onChange={(e) => setJobType(e.target.value)}
                     >
@@ -573,11 +601,11 @@ export default function LandingPage() {
 
                   {/* Experience Level Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-blue-500 mb-1">
+                    <label className="block text-sm font-medium text-blue-200 mb-1">
                       Experience Level
                     </label>
                     <select
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 text-sm"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white-800 bg-gray-600 text-sm"
                       value={experienceLevel}
                       onChange={(e) => setExperienceLevel(e.target.value)}
                     >
@@ -590,7 +618,7 @@ export default function LandingPage() {
 
                   {/* Salary Range Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-blue-500 mb-1">
+                    <label className="block text-sm font-medium text-blue-200 mb-1">
                       Salary Range: ${salaryRange[0].toLocaleString()} - $
                       {salaryRange[1].toLocaleString()}
                     </label>
@@ -614,10 +642,10 @@ export default function LandingPage() {
 
                   {/* Industry Filter (dropdown) */}
                   <div>
-                    <label className="block text-sm font-medium text-blue-500 mb-1">
+                    <label className="block text-sm font-medium text-blue-200 mb-1">
                       Industry
                     </label>
-                    <div className="border border-gray-300 rounded-md px-3 py-2 text-gray-800 text-sm h-20 overflow-y-auto">
+                    <div className="border border-gray-300 rounded-md px-3 py-2 text-white-800 bg-gray-600 text-sm h-20 overflow-y-auto">
                       {industryOptions.map((industry) => (
                         <div key={industry} className="flex items-center mb-1">
                           <input
@@ -1117,6 +1145,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      
+      
 
       {/* Categories with Enhanced Design */}
       <section className="py-12 bg-gray-50">
@@ -1162,6 +1192,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      
 
       {/* Interactive Features Section */}
       <section className="py-12 bg-white">
