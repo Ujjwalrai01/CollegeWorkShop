@@ -360,7 +360,8 @@ export default function LandingPage() {
             {/* Chat Button */}
             <button
               className="bg-green-600 text-white px-4 py-2 rounded font-medium hover:bg-green-700 transition-colors flex items-center gap-2"
-              onClick={() => {/* TODO: handle chat navigation */}}
+              onClick={() => navigate('/chat')}
+
             >
               <Users size={18} />
               Chat
@@ -450,7 +451,7 @@ export default function LandingPage() {
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     <div className="flex items-center"
-                      onClick={() => navigate('/home')}
+                      onClick={() => navigate('/')}
                     >
                       <LogOut size={16} className="mr-2" />
                       Sign Out
@@ -460,7 +461,9 @@ export default function LandingPage() {
               )}
             </div>
 
-            <button className="bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition-colors">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition-colors"
+            onClick={() => navigate('/post')}
+              >
               Post a Job
             </button>
           
