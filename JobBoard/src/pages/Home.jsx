@@ -79,7 +79,7 @@ const JobLeadsLanding = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="text-2xl font-bold text-white">
-                job<span className="text-blue-400">⫶⫶⫶</span>leads
+                job<span className="text-blue-400">⫶⫶⫶</span>board
               </div>
             </div>
 
