@@ -196,7 +196,7 @@ const AmazingAuthForm = () => {
                   <button
                     type="button"
                     // onClick={handleSubmit}
-                    onClick={() => navigate('/')}
+                    onClick={() => navigate('/landingpage')}
                     className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-indigo-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center group"
                   >
                     {isSignUp ? 'Create Account' : 'Sign In'}
