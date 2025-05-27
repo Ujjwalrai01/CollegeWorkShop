@@ -10,6 +10,8 @@ import UserSide from './pages/UserSide.jsx';
 import Resume from './pages/Resume.jsx';
 import Home from './pages/Home.jsx';
 import AuthForm from './pages/AuthForm.jsx';
+import PostJob from './pages/PostJob.jsx';
+import Chat from './pages/Chat.jsx';
 
 
 function App() {
@@ -21,11 +23,13 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/dashboard" element={<Dashboard />} /> */}
-      <Route path='/' element={<LandingPage />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/landingpage' element={<LandingPage />} />
       <Route path='/user' element={<UserSide />} />
       <Route path='/resume' element={<Resume />} />
-      <Route path='/home' element={<Home />} />
       <Route path='/signin' element={<AuthForm />} />
+      <Route path='/post' element={<PostJob />} />
+      <Route path='/chat' element={<Chat />} />
       {/* Add more routes as needed */}
 
     </Routes>
