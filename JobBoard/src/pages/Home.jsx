@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import FAQSection from "../component/FAQSection";
+import JobSeeker from "../assets/Images/jobSeeker.png";
 import { useNavigate } from "react-router-dom";
+// import { ChevronDown, ChevronUp } from "lucide-react";
 import {
   Menu,
   X,
@@ -11,14 +14,13 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import nikeLogo from "../assets/Images/nike2.png"; 
+import nikeLogo from "../assets/Images/nike2.png";
 import amazonLogo from "../assets/Images/amazon.png";
 import appleLogo from "../assets/Images/apple.png";
 import paypalLogo from "../assets/Images/paypal.png";
 import microsoftLogo from "../assets/Images/microsoft.png";
-import netflixLogo from "../assets/Images/netflix.png"; 
+import netflixLogo from "../assets/Images/netflix.png";
 import visaLogo from "../assets/Images/visa.png";
-
 
 const JobLeadsLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,28 +50,28 @@ const JobLeadsLanding = () => {
     },
   ];
 
-  const faqs = [
-    {
-      question: "What is JobLeads?",
-      answer:
-        "JobLeads is a comprehensive job search platform that helps professionals discover opportunities and connect with headhunters worldwide.",
-    },
-    {
-      question: "How does JobLeads help me land a job?",
-      answer:
-        "We provide targeted job matching, resume optimization, headhunter connections, and personalized career coaching to accelerate your job search.",
-    },
-    {
-      question: "What does the free JobLeads Resume Review include?",
-      answer:
-        "Our free resume review includes professional feedback on formatting, content optimization, keyword analysis, and actionable improvement recommendations.",
-    },
-    {
-      question: "What is the JobLeads Job Search Assessment?",
-      answer:
-        "A comprehensive evaluation of your job search strategy, including profile optimization, application approach, and interview preparation guidance.",
-    },
-  ];
+  // const faqs = [
+  //   {
+  //     question: "What is JobLeads?",
+  //     answer:
+  //       "JobLeads is a comprehensive job search platform that helps professionals discover opportunities and connect with headhunters worldwide.",
+  //   },
+  //   {
+  //     question: "How does JobLeads help me land a job?",
+  //     answer:
+  //       "We provide targeted job matching, resume optimization, headhunter connections, and personalized career coaching to accelerate your job search.",
+  //   },
+  //   {
+  //     question: "What does the free JobLeads Resume Review include?",
+  //     answer:
+  //       "Our free resume review includes professional feedback on formatting, content optimization, keyword analysis, and actionable improvement recommendations.",
+  //   },
+  //   {
+  //     question: "What is the JobLeads Job Search Assessment?",
+  //     answer:
+  //       "A comprehensive evaluation of your job search strategy, including profile optimization, application approach, and interview preparation guidance.",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -114,13 +116,15 @@ const JobLeadsLanding = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-              <button className="border border-gray-600 text-white px-4 py-2 rounded-lg hover:border-gray-500 transition-colors"
-              onClick={() => navigate("/signin")}
+              <button
+                className="border border-gray-600 text-white px-4 py-2 rounded-lg hover:border-gray-500 transition-colors"
+                onClick={() => navigate("/signin")}
               >
                 Sign up now
               </button>
-              <button className="text-gray-300 hover:text-white px-4 py-2 transition-colors"
-              onClick={() => navigate("/signin")}
+              <button
+                className="text-gray-300 hover:text-white px-4 py-2 transition-colors"
+                onClick={() => navigate("/signin")}
               >
                 Log in
               </button>
@@ -170,13 +174,15 @@ const JobLeadsLanding = () => {
                 Coaching
               </a>
               <div className="pt-4 pb-3 border-t border-slate-700">
-                <button className="w-full border border-gray-600 text-white px-4 py-2 rounded-lg mb-2"
-                onClick={() => navigate("/signin")}
+                <button
+                  className="w-full border border-gray-600 text-white px-4 py-2 rounded-lg mb-2"
+                  onClick={() => navigate("/signin")}
                 >
                   Sign up now
                 </button>
-                <button className="w-full text-gray-300 px-4 py-2"
-                onClick={() => navigate("/signin")}
+                <button
+                  className="w-full text-gray-300 px-4 py-2"
+                  onClick={() => navigate("/signin")}
                 >
                   Log in
                 </button>
@@ -189,6 +195,13 @@ const JobLeadsLanding = () => {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900"></div>
+        {/* Background Image (overlapping) */}
+        <img
+          src={JobSeeker}
+          alt="Hero Illustration"
+          className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 via-slate-900/80 to-slate-700 z-0" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-7xl font-bold mb-6">
             Land a better job
@@ -212,8 +225,9 @@ const JobLeadsLanding = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
-            <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105"
-            onClick={() => navigate("/signin")}
+            <button
+              className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105"
+              onClick={() => navigate("/signin")}
             >
               Sign up for free
             </button>
@@ -387,7 +401,7 @@ const JobLeadsLanding = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -416,7 +430,8 @@ const JobLeadsLanding = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+       <FAQSection />
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16">
