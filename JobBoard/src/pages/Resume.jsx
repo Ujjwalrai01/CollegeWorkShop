@@ -115,7 +115,7 @@ const ResumeUploadApp = () => {
             </button>
 
             <button className="ml-4 bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/landingpage")}
             >
               Back to HomePage
             </button>
