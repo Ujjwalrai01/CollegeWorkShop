@@ -510,7 +510,7 @@ export default function PostJobPage() {
                       name="companyName"
                       value={formData.companyName}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-600 ${
                         errors.companyName ? 'border-red-300 bg-red-50/50' : 'border-gray-200 hover:border-gray-300'
                       }`}
                       placeholder="Your company name"
@@ -588,10 +588,10 @@ export default function PostJobPage() {
                       name="employerName"
                       value={formData.employerName}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-600 ${
                         errors.employerName ? 'border-red-300 bg-red-50/50' : 'border-gray-200 hover:border-gray-300'
                       }`}
-                      placeholder="John Doe"
+                      placeholder="Ujjwal Rai"
                     />
                     {errors.employerName && <p className="mt-2 text-sm text-red-600 flex items-center"><AlertCircle className="w-4 h-4 mr-1" />{errors.employerName}</p>}
                   </div>
@@ -607,10 +607,10 @@ export default function PostJobPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-600 ${
                         errors.email ? 'border-red-300 bg-red-50/50' : 'border-gray-200 hover:border-gray-300'
                       }`}
-                      placeholder="john@company.com"
+                      placeholder="ujjwal@company.com"
                     />
                     {errors.email && <p className="mt-2 text-sm text-red-600 flex items-center"><AlertCircle className="w-4 h-4 mr-1" />{errors.email}</p>}
                   </div>
@@ -626,7 +626,7 @@ export default function PostJobPage() {
                       name="contactNumber"
                       value={formData.contactNumber}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border-2 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-600 ${
                         errors.contactNumber ? 'border-red-300 bg-red-50/50' : 'border-gray-200 hover:border-gray-300'
                       }`}
                       placeholder="+91 9876543210 or +1 (555) 123-4567"
