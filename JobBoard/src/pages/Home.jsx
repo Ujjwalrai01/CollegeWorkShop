@@ -291,7 +291,7 @@ const JobLeadsLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Since 2007, our mission has been to enable job seekers to{" "}
+              Since 2007, our mission has been to enable ~ seekers to{" "}
               <span className="text-blue-600">land a better job faster</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
