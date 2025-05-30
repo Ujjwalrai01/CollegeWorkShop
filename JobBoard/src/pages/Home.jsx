@@ -193,9 +193,8 @@ const JobLeadsLanding = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900"></div>
-        {/* Background Image (overlapping) */}
         <img
           src={JobSeeker}
           alt="Hero Illustration"
@@ -236,7 +235,56 @@ const JobLeadsLanding = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* Hero Section */}
+<section className="relative py-24 lg:py-40 overflow-hidden font-sans">
+  {/* Background Layers */}
+  <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] z-0" />
+  <img
+    src={JobSeeker}
+    alt="Hero Illustration"
+    className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
+  />
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-slate-900/80 to-purple-700/40 z-0" />
+
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 -mt-18">
+    <h1 className="text-4xl lg:text-7xl font-extrabold text-white drop-shadow-xl mb-6 leading-tight">
+      <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500 bg-clip-text text-transparent">
+        Land a better job
+      </span>
+    </h1>
+    <h2 className="text-3xl lg:text-5xl font-bold text-blue-300 italic mb-12 tracking-tight drop-shadow-md">
+      faster!
+    </h2>
+
+    <div className="mb-16 space-y-3">
+      <p className="text-xl lg:text-2xl text-slate-300">
+        Get more <span className="text-blue-400 font-medium">tailored guidance</span>
+      </p>
+      <p className="text-xl lg:text-2xl text-slate-300">
+        <span className="text-white font-semibold">headhunter contacts</span>
+      </p>
+      <p className="text-xl lg:text-2xl text-slate-300">
+        Boost your <span className="text-purple-400 font-medium">confidence</span> today
+      </p>
+    </div>
+
+    {/* CTA Buttons */}
+    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
+      <button
+        className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg transform transition-all duration-300 hover:scale-105"
+        onClick={() => navigate("/signin")}
+      >
+        🚀 Sign up for free
+      </button>
+      <button className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-md backdrop-blur-sm transition-all duration-300 hover:scale-105">
+        📄 Free Resume Review
+      </button>
+    </div>
+  </div>
+</section>
+
 
       {/* Mission Section */}
       <section className="py-16 lg:py-24 bg-white text-gray-900">
@@ -313,6 +361,10 @@ const JobLeadsLanding = () => {
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* Community Section */}
       <section className="py-16 lg:py-24 bg-gray-50">
