@@ -215,40 +215,6 @@ const JobBoard = () => {
                 <a href="#" className="text-gray-700 hover:text-blue-600 pb-4 transition-colors">Salary guide</a>
               </nav>
             </div>
-            <div className="flex items-center space-x-4">
-              <button className="hidden md:flex items-center space-x-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors">
-                <Upload className="w-4 h-4" />
-                <span>Upload Resume</span>
-              </button>
-              <button className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                <Plus className="w-4 h-4" />
-                <span className="hidden md:inline">Post Job</span>
-                <span className="md:hidden">Post</span>
-              </button>
-              <Bell className="w-6 h-6 text-gray-600 cursor-pointer hover:text-blue-600 transition-colors" />
-              <MessageSquare className="w-6 h-6 text-gray-600 cursor-pointer hover:text-blue-600 transition-colors" />
-              <div className="relative" ref={userMenuRef}>
-                <button 
-                  onClick={() => setShowUserMenu(!showUserMenu)}
-                  className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded-full transition-colors"
-                >
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <User className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <ChevronDown className="w-4 h-4 text-gray-500" />
-                </button>
-                {showUserMenu && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1">
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Jobs</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Saved Jobs</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                    <hr className="my-1" />
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
-                  </div>
-                )}
-              </div>
-            </div>
           </div>
         </div>
       </header>
