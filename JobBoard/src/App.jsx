@@ -12,6 +12,7 @@ import Home from './pages/Home.jsx';
 import AuthForm from './pages/AuthForm.jsx';
 import PostJob from './pages/PostJob.jsx';
 import Chat from './pages/Chat.jsx';
+import AdminPanel from './Admin/Admin.jsx';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Route path='/signin' element={<AuthForm />} />
       <Route path='/post' element={<PostJob />} />
       <Route path='/chat' element={<Chat />} />
+      <Route path='/admin' element={<AdminPanel />} />
       {/* Add more routes as needed */}
 
     </Routes>
